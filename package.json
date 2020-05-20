@@ -13,7 +13,7 @@
 		"express-session": "^1.15.6",
 		"method-override": "^2.3.10",
 		"mongodb": "^3.0.3",
-		"mongoose": "^5.0.7",
+		"mongoose": "^5.7.5",
 		"nodemon": "^1.17.1",
 		"path": "^0.12.7",
 		"whitespace": "^2.1.0"
