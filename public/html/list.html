@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Athlete Profiles</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+      <button class="button btn-secondary btn-lg" ui-sref="/">Back</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="jumbotron text-center">
+        <ul>
+          <li class="lines" ng-repeat="player in vm.players">
+            <div class="row text-center">
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <a ui-sref="listOne({username:player.username})">
+                  <h5>{{player.name}}</h5>
+                </a>
+              </div>
+              <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <h5>{{player.sport.join(', ')}}</h5>
+                <!-- <ol>
+                  <li class="li-no-hover" ng-repeat="sport in player.sport">
+                  </li>
+                </ol> -->
+              </div>
+              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h5>{{player.twitter}}</h5>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

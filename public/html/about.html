@@ -1,0 +1,105 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>About</h1>
+    </div>
+  </div>
+  <div ng-if="vm.hide">
+    <h3 class="text-center">Please go back to enter your Username.</h3>
+    <div class="col-md-12 text-center">
+      <button type="submit" class="btn btn-secondary btn-lg" ui-sref="/">Back</button>
+    </div>
+  </div>
+  <div ng-if="!vm.hide">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="jumbotron">
+          <form name="playeraboutForm" novalidate>
+            <!-- Association -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Association</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" name="Association" class="form-control" ng-model="vm.association" />
+              </div>
+            </div>
+
+            <!-- Team -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Team</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" name="Team" class="form-control" ng-model="vm.team" />
+              </div>
+            </div>
+
+            <!-- About -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">About</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <textarea type="text" name="about" class="form-control" ng-model="vm.about"></textarea>
+              </div>
+            </div>
+
+            <!-- Interest-->
+
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Interest</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" name="interest" class="form-control" ng-model="vm.interest" />
+              </div>
+            </div>
+
+            <!-- Charities -->
+
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Charities</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" name="charities" class="form-control" ng-model="vm.charities" />
+              </div>
+            </div>
+
+            <!-- Pets -->
+
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Pets</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" name="pets" class="form-control" ng-model="vm.pets" />
+              </div>
+            </div>
+
+            <!-- Drinks -->
+
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Drinks</label>
+              <div class="col-xs-2 col-sm-2 col-md-2">
+                <multiselect ng-model="vm.alchol" options="vm.option" classes-btn="'btn-block'"
+                  selection-limit="1">
+                </multiselect>
+              </div>
+            </div>
+
+            <!-- Married -->
+
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Married</label>
+              <div class="col-xs-2 col-sm-2 col-md-2">
+                <multiselect ng-model="vm.married" options="vm.option" classes-btn="'btn-block'"
+                  selection-limit="1">
+                </multiselect>
+              </div>
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="form-group row margin">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg" ui-sref="media"
+                  ng-disabled="playeraboutForm.$invalid" ng-click="vm.submit();">Next</button>
+                <button type="submit" class="btn btn-secondary btn-lg" ui-sref="basic">Back</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

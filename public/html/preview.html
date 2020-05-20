@@ -1,0 +1,191 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Preview</h1>
+    </div>
+  </div>
+  <div ng-if="vm.hide">
+    <h3>Please go back to enter your Username.</h3>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+      <button type="submit" class="btn btn-secondary btn-lg" ui-sref="/">Back</button>
+    </div>
+  </div>
+  <div ng-if="!vm.hide">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="jumbotron">
+          <form name="playerPreviewForm" novalidate>
+            <!-- Name -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Name</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.name}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Username -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Uservalue</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.username}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Sport -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Sport</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.sports}}" class="form-control" disabled>
+              </div>
+            </div>
+            <!-- Nationality -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Nationality</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.nationality}}" class="form-control" disabled>
+              </div>
+            </div>
+
+            <!-- Gender-->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Gender</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.gender[0]}}" class="form-control" disabled>
+              </div>
+            </div>
+
+            <!-- Date of Birth-->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Date of Birth</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.dob}}" class="form-control" disabled>
+              </div>
+            </div>
+
+            <!-- Association -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Association</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.association}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Team -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Team</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.team}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- About -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">About</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.about}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Interest-->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Interest</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.interest}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Charities -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Charities</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.charities}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Pets -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Pets</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.pets}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Drinks -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Drinks</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.alchol[0]}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Married -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Married</label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.married[0]}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- facebook -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-facebook fa-2x"></i></label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.facebook}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Twitter -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-twitter fa-2x"></i></label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.twitter}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Instagram -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-instagram fa-2x"></i></label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.instagram}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Snapchat -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i
+                  class="fa fa-snapchat-ghost fa-2x"></i></label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.snapchat}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Linkedin -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-linkedin fa-2x"></i></label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.linkedin}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Twitch -->
+            <div class="form-group row">
+              <label class="col-xs-2 col-sm-2 col-md-2 col-form-label"><i class="fa fa-twitch fa-2x"></i></label>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <input type="text" value="{{vm.playerInfo.twitch}}" class="form-control" disabled />
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-group row margin">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg" ui-sref="/" ng-disabled="playeraboutForm.$invalid"
+                  ng-click="vm.submit();">Submit</button>
+                <button type="submit" class="btn btn-secondary btn-lg" ui-sref="media">Back</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

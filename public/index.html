@@ -1,0 +1,47 @@
+<!-- public/views/index.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./public/css/style.css">
+  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js">
+  </script>
+  <script type="text/javascript" src="./public/src/multiselect/dist/angular-bootstrap-multiselect.min.js"></script>
+  <title>Athlete Profile App</title>
+
+</head>
+
+<body ng-app="AthleteProfile">
+  <ui-view></ui-view>
+
+  <!-- Modules-->
+  <script type="text/javascript" src="./public/js/modules/main.module.js"></script>
+  <script type="text/javascript" src="./public/js/modules/data.module.js"></script>
+  <script type="text/javascript" src="./public/js/app.js"></script>
+
+  <!--Controllers -->
+  <script type="text/javascript" src="./public/js/controllers/main.controller.js"></script>
+  <script type="text/javascript" src="./public/js/controllers/list.controller.js"></script>
+  <script type="text/javascript" src="./public/js/controllers/details.controller.js"></script>
+
+  <script type="text/javascript" src="./public/js/controllers/basic.controller.js"></script>
+  <script type="text/javascript" src="./public/js/controllers/about.controller.js"></script>
+  <script type="text/javascript" src="./public/js/controllers/social.controller.js"></script>
+  <script type="text/javascript" src="public/js/controllers/preview.controller.js"></script>
+
+  <!-- Services-->
+  <script type="text/javascript" src="./public/js/services/data.service.js"></script>
+  <script type="text/javascript" src="./public/js/services/player.service.js"></script>
+
+</body>
+
+</html>

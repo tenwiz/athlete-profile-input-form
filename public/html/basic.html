@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+      <h1>Basic Info</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+      <div class="jumbotron">
+        <form name="playerForm" novalidate>
+          <!-- Name -->
+          <div class="form-group row">
+            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Name</label>
+            <div class="col-xs-10 col-sm-10 col-md-10">
+              <input type="text" name="name" class="form-control" ng-model="vm.name" required />
+              <small ng-show="playerForm.name.$invalid && !playerForm.name.$pristine" class="help-block">You name is
+                required.</small>
+            </div>
+          </div>
+
+          <!-- Username -->
+          <div class="form-group row">
+            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Username</label>
+            <div class="col-xs-10 col-sm-10 col-md-10">
+              <input type="text" name="username" class="form-control" ng-model="vm.username" required />
+              <small ng-show="playerForm.username.$invalid && !playerForm.username.$pristine" class="help-block">You
+                Username is required.</small>
+            </div>
+          </div>
+
+          <!-- Sport -->
+          <div class="form-group row">
+            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Sports</label>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <multiselect ng-model="vm.sports" options="vm.options" classes-btn="'btn-block'"
+                show-search="true">
+              </multiselect>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8">
+              <input type="text" class="form-control" value="{{vm.sports}}" name="sports" disabled required />
+              <small ng-show="playerForm.sports.$invalid && !playerForm.sports.$pristine" class="help-block">Sport(s)
+                you play is required.</small>
+            </div>
+          </div>
+
+
+          <!-- Nationality -->
+          <div class="form-group row">
+            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Nationality</label>
+            <div class="col-xs-10 col-sm-10 col-md-10">
+              <input type="text" name="nationality" class="form-control" ng-model="vm.nationality" required />
+              <small ng-show="playerForm.nationality.$invalid && !playerForm.nationality.$pristine"
+                class="help-block">Your Nationality is required.</small>
+            </div>
+          </div>
+
+          <!-- Gender -->
+          <div class="form-group row">
+            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Gender</label>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+              <multiselect ng-model="vm.gender" options="vm.genderOptions" classes-btn="'btn-block'"
+                selection-limit="1">
+              </multiselect>
+            </div>
+          </div>
+          <!-- Date of Birth-->
+          <div class="form-group row">
+            <label class="col-xs-2 col-sm-2 col-md-2 col-form-label">Date of Birth</label>
+            <div class="col-xs-10 col-sm-10 col-md-10">
+              <input type="date" name="dob" class="form-control" ng-model="vm.dob" required />
+              <small ng-show="playerForm.dob.$invalid && !playerForm.dob.$pristine" class="help-block">Your Date of
+                birth is required.</small>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="form-group row margin">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+              <button type="submit" class="btn btn-primary btn-lg" ui-sref="about" ng-disabled="playerForm.$invalid"
+                ng-click="vm.submit()">Next</button>
+              <button type="submit" class="btn btn-secondary btn-lg" ui-sref="/">Back</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
