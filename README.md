@@ -1,5 +1,7 @@
 Athlete Profile Input Form
 
+To see the live demo: https://tenwiz-athlete-profile.herokuapp.com
+
 Get Started
 1. git clone https://github.com/tenwiz/athlete-profile-input-form.git
 2. npm install
