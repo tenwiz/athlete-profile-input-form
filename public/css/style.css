@@ -40,6 +40,10 @@ li.li-no-hover:hover {
     margin-left: 0px;
 }
 
+.item-unselected, .item-selected {
+    padding: 0 16px;
+}
+
 /* Font  Awesome CSS */
 
 .fa-facebook, .fa-facebook-square {
